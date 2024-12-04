@@ -1,0 +1,69 @@
+/* Algemene reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* HTML en body styling */
+  html, body {
+    height: 100%;
+    font-family: 'DM Sans', Arial, sans-serif; /* Gebruik DM Sans */
+    background-color: #C0FF00; /* Achtergrondkleur */
+    color: #000; /* Zwarte tekst */
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+  }
+  
+  /* Fade-in keyframes */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Container styling */
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 20px; /* Zorgt voor wat ruimte aan de zijkanten op kleine schermen */
+  }
+  
+  /* Logo styling */
+  .logo {
+    max-width: 400px; /* Maximale breedte voor grote schermen */
+    width: 90%; /* Zorgt ervoor dat het logo zich aanpast aan de schermgrootte */
+    height: auto;
+    margin-bottom: 30px;
+  }
+  
+  /* Tekst styling */
+  .message {
+    font-size: 18px; /* Standaard tekstgrootte */
+    font-weight: 300;
+  }
+  
+  /* Media queries voor responsiviteit */
+  @media (max-width: 768px) {
+    .logo {
+      max-width: 300px; /* Kleiner logo op tablets */
+      margin-bottom: 15px;
+    }
+    .message {
+      font-size: 16px; /* Kleinere tekst op tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      max-width: 200px; /* Nog kleiner logo op smartphones */
+    }
+    .message {
+      font-size: 14px; /* Kleinere tekst op smartphones */
+    }
+  }
+  
